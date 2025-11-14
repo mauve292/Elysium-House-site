@@ -1,0 +1,806 @@
+/* Color palette */
+:root {
+    --bg-page: #ffffff;      /* White page background */
+    --bg-block: #e7f0fa;     /* Matte light blue for blocks */
+    --text-main: #4B6E8E;    /* Dark matte blue for text */
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    text-align: center; /* Center all text by default */
+}
+
+
+/* Header & navigation */
+header {
+    padding: 0 0 20px 0;
+}
+
+/* Image at the top of the header */
+.header-image {
+    width: 100%;
+    height: 400px; /* adjust height if you want a taller/shorter hero */
+    background-image: url('Elysium\ pics/photo1.webp'); /* make sure this matches your file name & location */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wrapper for h1, line and nav under the image (non-sticky, just layout) */
+.header-content {
+    padding: 20px 0 26px 0;  /* top | right | bottom | left */
+    max-width: 950px;       /* same width as the blocks */
+    margin: 0 auto;          /* center it */
+    text-align: center;
+}
+
+
+/* Sticky bar that contains the title, line and nav */
+.header-bar {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-page); /* background behind the bar */
+    z-index: 100;                     /* stay above content when scrolling */
+}
+
+.header-content h1 {
+    font-size: 2.4rem;    /* same size */
+    margin-bottom: 12px;  /* a bit more space before the line */
+}
+
+
+/* Thin line between title and nav, 75% of nav/header width */
+.header-divider {
+    width: 75%;
+    height: 1px;
+    background-color: rgba(22, 58, 95, 0.3);
+    margin: 8px auto 16px; /* a bit more space above and below */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 14px;          /* slightly more space below the line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hamburger button (hidden on desktop by default) */
+.nav-toggle {
+    display: none; /* shown only on small screens */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin: 0 auto 8px auto; /* center under divider */
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: var(--text-main);
+    border-radius: 999px;
+    margin: 5px 0;
+}
+
+
+nav ul li {
+    margin: 0;   /* flex will handle spacing */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+main section {
+    background-color: var(--bg-block);
+    margin: 20px auto;
+    padding: 40px 20px;
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 10px;
+    scroll-margin-top: 120px; /* leaves space for the sticky bar */
+}
+
+/* Section titles */
+main section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Photo Gallery – Carousel
+   ========================= */
+
+#photo-gallery h2 {
+    margin-bottom: 10px;
+}
+
+.gallery-carousel {
+    position: relative;
+    margin-top: 24px;
+    border-radius: 16px;
+    padding: 16px; /* space around the image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    background: #ffffff; /* white card inside the blue block */
+}
+
+
+.carousel-track-container {
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent; /* no black bars above/below the photos */
+}
+
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    cursor: zoom-in; /* inspection hint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0; /* breathing room above and below the image */
+}
+
+
+.carousel-slide img {
+    display: block;
+    max-width: 100%;
+    height: auto;        /* let height adapt – shows full image */
+    object-fit: contain; /* no cropping; letterbox if needed */
+    margin: 0 auto;
+}
+
+
+/* Arrows */
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-main);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2; /* make sure both arrows sit above the images */
+}
+
+
+.carousel-arrow.prev {
+    left: 18px;
+}
+
+.carousel-arrow.next {
+    right: 18px;
+}
+
+.carousel-arrow:hover {
+    background-color: #ffffff;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Dots */
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.carousel-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 1px solid var(--text-main);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.is-active {
+    background: var(--text-main);
+    transform: scale(1.1);
+}
+
+/* =============
+   Lightbox
+   ============= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 200; /* above sticky header */
+}
+
+.lightbox.is-open {
+    display: flex;
+}
+
+.lightbox-inner {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Close button */
+
+.lightbox-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: #ffffff;
+    color: var(--text-main);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    background: #f2f2f2;
+    transform: scale(1.05);
+}
+
+/* Lightbox navigation arrows (inspect mode) */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-main);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    z-index: 3; /* over the image */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lightbox-arrow:hover {
+    background: #ffffff;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-prev {
+    left: 16px;
+}
+
+.lightbox-next {
+    right: 16px;
+}
+
+
+/* =========================
+   Amenities – icon list
+   ========================= */
+
+#amenities .amenities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 40px;             /* row gap | column gap */
+    max-width: 1000px;
+    margin: 20px auto 0 auto;   /* center inside the blue block */
+}
+
+.amenity-item {
+    position: relative;
+    padding-left: 26px;         /* space for the small icon */
+    font-size: 0.95rem;
+    min-width: 220px;           /* makes nice columns on wide screens */
+    text-align: left;           /* text left, grid centered */
+}
+
+/* Small circular icon (check-style) like in a amenities list */
+.amenity-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    border: 1px solid var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-main);
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+    #amenities .amenities-grid {
+        justify-content: flex-start;
+        gap: 10px 20px;
+    }
+
+    .amenity-item {
+        min-width: 100%;
+    }
+}
+
+
+/* =========================
+   Guest Reviews – Carousel
+   ========================= */
+
+#guest-reviews .reviews-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 24px auto 0 auto;
+}
+
+.reviews-track-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 4px 6px 12px;
+}
+
+/* hide horizontal scrollbar but keep scroll */
+.reviews-track-container::-webkit-scrollbar {
+    display: none;
+}
+.reviews-track-container {
+    scrollbar-width: none;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 16px;
+}
+
+.review-card {
+    flex: 0 0 300px;          /* width of each card – 3–4 visible on large screens */
+    max-width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 16px 18px;
+    text-align: left;
+}
+
+/* header: name + meta on left, rating on right */
+.review-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.review-name {
+    font-weight: 600;
+}
+
+.review-meta {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.review-rating {
+    background: #0046b8;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+.review-rating span {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 2px;
+}
+
+/* title + body */
+.review-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.review-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.92rem;
+}
+
+.review-emoji {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    border: 1px solid #18a34a; /* green like a positive icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+/* arrows */
+.reviews-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--text-main);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+}
+
+.reviews-arrow.prev {
+    left: -10px;
+}
+.reviews-arrow.next {
+    right: -10px;
+}
+
+.reviews-arrow:hover {
+    background-color: #ffffff;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Source line */
+.reviews-source {
+    margin-top: 18px;
+    font-size: 0.9rem;
+}
+
+.reviews-source a {
+    color: var(--text-main);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Mobile: 1 card at a time */
+@media (max-width: 700px) {
+    .review-card {
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+
+    .reviews-arrow.prev {
+        left: 4px;
+    }
+
+    .reviews-arrow.next {
+        right: 4px;
+    }
+}
+
+
+/* =========================
+   Location – map & POIs
+   ========================= */
+
+#location .location-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;   /* columns share the same height */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+#location .location-map {
+    flex: 1 1 360px;
+    max-width: 600px;
+}
+
+#location .location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+    border-radius: 12px;
+}
+
+#location .location-pois {
+    flex: 1 1 260px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* keep vertical centering next to the map */
+    align-items: stretch;
+    text-align: left;
+}
+
+
+
+#location .location-pois h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+#location .location-pois ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#location .location-pois li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+#location .location-pois li .poi-name {
+    flex: 1;
+}
+
+#location .location-pois li .poi-distance {
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+
+/* Mobile: stack map above list */
+@media (max-width: 768px) {
+    #location .location-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #location .location-pois {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================
+   House Policies – grid list
+   ========================= */
+
+#house-policies .policies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px 32px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+}
+
+.policy-item {
+    position: relative;
+    padding-left: 26px; /* space for the small tick */
+    font-size: 0.95rem;
+}
+
+/* Small tick at the start of each policy */
+.policy-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    border: 1px solid var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-main);
+}
+
+.policy-item h3 {
+    font-size: 1rem;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.policy-item p {
+    margin: 0;
+    font-size: 0.92rem;
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+    #house-policies .policies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   Book Your Stay – CTA button
+   ========================= */
+
+#book-your-stay .book-cta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.book-button {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 999px;
+    background-color: var(--text-main);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-button:hover {
+    background-color: #1e4c7e;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.book-button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.book-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+#book-your-stay {
+    background-color: transparent;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-contact {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;   /* center the whole row */
+    align-items: center;       /* vertically center icons & text */
+    gap: 8px;                  /* space between icons and number */
+}
+
+.footer-contact img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-phone-number {
+    font-weight: 500;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: #ffffff;
+    color: var(--text-main);
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+/* Visually hidden, but readable by screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mobile navigation: collapse into hamburger */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;           /* show the button on mobile */
+    }
+
+    nav {
+        display: none;            /* hide menu by default */
+    }
+
+    .header-bar.nav-open nav {
+        display: block;           /* show menu when toggled */
+    }
+
+    nav ul {
+        flex-direction: column;   /* vertical list */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* Visible focus styles for custom controls */
+.carousel-arrow:focus-visible,
+.carousel-dot:focus-visible,
+.lightbox-close:focus-visible,
+.lightbox-arrow:focus-visible,
+.reviews-arrow:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+}
+
