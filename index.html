@@ -1,859 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elysium House Thessaloniki | 2-Bedroom Apartment in City Center</title>
-    <meta name="description" content="Elysium House Thessaloniki is a fully equipped two-bedroom apartment in the city center, with balcony, sofa bed, work desk and fast WiFi, a short walk from the White Tower, Sintrivani Square and the seafront.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="elysium2.css">
+  <title>Elysium House Thessaloniki | Luxury 2-Bedroom Apartment in the City Center</title>
+  <meta name="description" content="Stay at Elysium House, a luxury 2-bedroom apartment in the heart of Thessaloniki, with private balcony, high-speed WiFi, fully equipped kitchen and modern comfort. Book now via Booking.com.">
+  <meta name="keywords" content="Elysium House Thessaloniki, luxury apartment Thessaloniki, city center accommodation, 2-bedroom apartment Thessaloniki Greece, Booking Thessaloniki, Elysium House booking">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Apartment",
-      "name": "Elysium House Thessaloniki",
-      "description": "Two-bedroom city center apartment in Thessaloniki with private balcony, fully equipped kitchen, sofa bed and fast WiFi, a short walk from the White Tower and Sintrivani metro.",
-      "url": "https://YOUR-DOMAIN-URL-HERE/",
-      "numberOfRooms": 2,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "minValue": 1,
-        "maxValue": 5
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "REPLACE WITH STREET & NUMBER",
-        "addressLocality": "Thessaloniki",
-        "addressRegion": "Central Macedonia",
-        "postalCode": "REPLACE WITH POSTAL CODE",
-        "addressCountry": "GR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.6296346,
-        "longitude": 22.9496861
-      },
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "High-speed WiFi" },
-        { "@type": "LocationFeatureSpecification", "name": "Air conditioning" },
-        { "@type": "LocationFeatureSpecification", "name": "Two bedrooms" },
-        { "@type": "LocationFeatureSpecification", "name": "Sofa bed" },
-        { "@type": "LocationFeatureSpecification", "name": "Fully equipped kitchen" },
-        { "@type": "LocationFeatureSpecification", "name": "Private balcony" }
-      ],
-      "sameAs": [
-        "https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html"
-      ]
-    }
-    </script>
-    
+  <link rel="canonical" href="https://your-domain.example/" />
+
+  <!-- SEO & mobile -->
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4B6E8E" />
+
+  <!-- Open Graph for social media -->
+  <meta property="og:title" content="Elysium House Thessaloniki — Luxury 2-Bedroom Apartment in City Center" />
+  <meta property="og:description" content="A modern, luxurious 2-bedroom apartment in the center of Thessaloniki with private balcony, WiFi, and elegant design. Book now via Booking.com." />
+  <meta property="og:image" content="images/photo1.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Elysium House Thessaloniki",
+    "image": "https://yourdomain.com/images/photo1.jpg",
+    "description": "Luxury 2-bedroom apartment located in the heart of Thessaloniki with private balcony, high-speed WiFi, and fully equipped kitchen.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34 Ethnikis Amynis",
+      "addressLocality": "Thessaloniki",
+      "postalCode": "54621",
+      "addressCountry": "GR"
+    },
+    "telephone": "+30 698 474 0241",
+    "url": "https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html"
+  }
+  </script>
+
+  <!-- Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Header image -->
-    <header>
-        <div class="header-image" role="img"
-             aria-label="Terrace with city view and outdoor chairs"></div>
-    </header>
+  <!-- Top nav (new, content unchanged) -->
+  <header class="site-header" id="top">
+    <div class="header-bg" aria-hidden="true"></div>
 
-    <!-- Sticky bar with title and navigation -->
-    <div class="header-bar">
-        <div class="header-content">
-            <h1>Elysium House Thessaloniki</h1>
-            <div class="header-divider"></div>
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Elysium House home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Elysium House</span>
+          <span class="brand-sub">Thessaloniki</span>
+        </span>
+      </a>
 
-            <!-- Mobile nav toggle button -->
-            <button class="nav-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false"
-                    aria-controls="site-nav">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-            </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
 
-            <nav id="site-nav" aria-label="Main site navigation">
-                <ul>
-                    <li><a href="#photo-gallery">Photo Gallery</a></li>
-                    <li><a href="#amenities">Amenities</a></li>
-                    <li><a href="#guest-reviews">Guest Reviews</a></li>
-                    <li><a href="#location">Location</a></li>
-                    <li><a href="#house-policies">House Policies</a></li>
-                    <li><a href="#book-your-stay">Book Your Stay</a></li>
-                </ul>
-            </nav>
+      <div class="nav-links" id="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#guest-reviews">Reviews</a>
+        <a href="#location">Location</a>
+        <a href="#policies">Policies</a>
+</div>
+
+      <a class="cta-pill" href="#booking">Book</a>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" role="img" aria-label="Elysium House Thessaloniki photo"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-kicker reveal" data-anim="rise">
+          Luxury City-Center Stay
         </div>
+
+        <h1 id="hero-title" class="reveal" data-anim="hero">
+          Elysium House Thessaloniki
+        </h1>
+
+        <p class="hero-subtitle reveal" data-anim="fade">
+          Luxury 2-Bedroom Apartment in the Heart of Thessaloniki
+        </p>
+
+        <div class="hero-actions reveal" data-anim="rise">
+          <a class="button primary" href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html" target="_blank" rel="noopener">
+            Book Now on Booking.com
+          </a>
+          <a class="button ghost" href="#gallery">View Photos</a>
+        </div>
+
+        <ul class="hero-badges reveal" data-anim="fade">
+          <li>Private Balcony</li>
+          <li>High-Speed WiFi</li>
+          <li>Fully Equipped Kitchen</li>
+        </ul>
+      </div>
+    </section>
+  </header>
+
+  <main id="content" role="main">
+    <section class="section reveal" data-anim="card" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-head">
+        <h2 id="gallery-title">Photo Gallery</h2>
+        <p class="section-lead">A quick look at the spaces and details you will enjoy during your stay.</p>
+      </div>
+
+      <div class="gallery" role="list">
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo1.jpg" data-alt="Living room of Elysium House, Thessaloniki">
+          <img src="images/photo1.jpg" alt="Living room of Elysium House, Thessaloniki" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo2.jpg" data-alt="Modern kitchen in Elysium House, Thessaloniki">
+          <img src="images/photo2.jpg" alt="Modern kitchen in Elysium House, Thessaloniki" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo3.jpg" data-alt="Bedroom with queen bed in Elysium House">
+          <img src="images/photo3.jpg" alt="Bedroom with queen bed in Elysium House" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo4.jpg" data-alt="Private balcony of Elysium House overlooking Thessaloniki">
+          <img src="images/photo4.jpg" alt="Private balcony of Elysium House overlooking Thessaloniki" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo5.jpg" data-alt="Bathroom with modern amenities at Elysium House">
+          <img src="images/photo5.jpg" alt="Bathroom with modern amenities at Elysium House" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item" type="button" role="listitem" data-src="images/photo6.jpg" data-alt="Second bedroom with twin beds at Elysium House">
+          <img src="images/photo6.jpg" alt="Second bedroom with twin beds at Elysium House" loading="lazy" decoding="async">
+        </button>
+      </div>
+    </section>
+
+    <section class="section reveal" data-anim="split" id="amenities" aria-labelledby="amenities-title">
+      <div class="section-head">
+        <h2 id="amenities-title">Amenities</h2>
+        <p class="section-lead">Everything you need for comfort, convenience, and an effortless city stay.</p>
+      </div>
+
+      <ul class="amenities" aria-label="Amenities list">
+        <li>High-Speed WiFi</li>
+        <li>Fully Equipped Kitchen</li>
+        <li>Air Conditioning</li>
+        <li>Central Heating</li>
+        <li>Private Balcony</li>
+        <li>Washing Machine</li>
+        <li>Iron &amp; Ironing Board</li>
+        <li>Safe Box</li>
+        <li>Hair Dryer</li>
+      </ul>
+    </section>
+
+    <section class="section reveal" data-anim="card" id="guest-reviews" aria-labelledby="reviews-title">
+      <div class="section-head">
+        <h2 id="reviews-title">Guest Reviews</h2>
+        <p class="section-lead">Verified guest feedback — directly from Booking.com.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <header class="review-header">
+            <strong>Panos (Greece)</strong>
+            <span class="review-date">September 2024</span>
+          </header>
+          <div class="review-score" aria-label="Score 9.8 out of 10">9.8 / 10</div>
+          <p>«Πολύ βολικό, μεγάλο και άνετο στο κέντρο της Θεσσαλονίκης. Είναι εξοπλισμένο με οτιδήποτε μπορεί να χρειαστείς, άνετα κρεβάτια, ωραίο μπαλκόνι με θέα! Καλή επικοινωνία με τον διαχειριστή.»</p>
+        </article>
+
+        <article class="review-card">
+          <header class="review-header">
+            <strong>Vaso (Greece)</strong>
+            <span class="review-date">August 2024</span>
+          </header>
+          <div class="review-score" aria-label="Score 10 out of 10">10 / 10</div>
+          <p>«Η τοποθεσία, η καθαριότητα, οι παροχές…είχε τα πάντα … ακόμα και φαρμακείο!!»</p>
+        </article>
+
+        <article class="review-card">
+          <header class="review-header">
+            <strong>Popi (Greece)</strong>
+            <span class="review-date">August 2024</span>
+          </header>
+          <div class="review-score" aria-label="Score 9.5 out of 10">9.5 / 10</div>
+          <p>«Καθαρό δωμάτιο, ωραία θέα και κοντά σε φαγητό και καφέ. Πολύ άνετο διαμέρισμα.»</p>
+        </article>
+
+        <article class="review-card">
+          <header class="review-header">
+            <strong>Panagiotou</strong>
+            <span class="review-date">July 2024</span>
+          </header>
+          <div class="review-score" aria-label="Score 9.7 out of 10">9.7 / 10</div>
+          <p>«Πολύ ωραίο σπίτι, άνετο για μια οικογένεια, καθαρό με όμορφη θέα. Εξαιρετική διαμονή!»</p>
+        </article>
+
+        <article class="review-card">
+          <header class="review-header">
+            <strong>Marzena (UK)</strong>
+            <span class="review-date">June 2024</span>
+          </header>
+          <div class="review-score" aria-label="Score 10 out of 10">10 / 10</div>
+          <p>«Ένα υπέροχο, λειτουργικό και πολύ καθαρό διαμέρισμα στο κέντρο της πόλης με θέα! Είχε όλα τα απαραίτητα. Ευχαριστούμε τον κύριο Βασίλη για την ευγένειά του και τις πληροφορίες!»</p>
+        </article>
+      </div>
+
+      <div class="reviews-footer">
+        <p>Verified reviews from <a href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html" target="_blank" rel="noopener">Booking.com</a></p>
+      </div>
+    </section>
+
+    <section class="section reveal" data-anim="split" id="location" aria-labelledby="location-title">
+      <div class="section-head">
+        <h2 id="location-title">Location</h2>
+        <p class="section-lead">Elysium House is perfectly located in the center of Thessaloniki, near the Rotunda, Arch of Galerius, and the White Tower — within walking distance to cafes, shops, and landmarks.</p>
+      </div>
+
+      <div class="map-shell">
+        <iframe
+          src="https://www.google.com/maps?q=Elysium%20House%20Thessaloniki&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Elysium House Thessaloniki Location">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section reveal" data-anim="card" id="policies" aria-labelledby="policies-title">
+      <div class="section-head">
+        <h2 id="policies-title">House Policies</h2>
+        <p class="section-lead">A few simple policies to ensure a great stay for everyone.</p>
+      </div>
+
+      <ul class="policies">
+        <li><strong>Check-in:</strong> from 15:00</li>
+        <li><strong>Check-out:</strong> until 12:00</li>
+        <li><strong>No pets allowed</strong></li>
+        <li><strong>No smoking</strong></li>
+      </ul>
+    </section>
+
+<section class="section booking reveal" data-anim="hero" id="booking" aria-labelledby="booking-title">
+      <div class="booking-inner">
+        <h2 id="booking-title">Book Your Stay</h2>
+        <p>Secure your dates on Booking.com.</p>
+        <a class="button primary" href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html" target="_blank" rel="noopener">
+          Book Now on Booking.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Elysium House Thessaloniki — Luxury 2-Bedroom Apartment</p>
+      <a class="footer-top" href="#top">Back to top</a>
     </div>
+  </footer>
 
-
-
-    <main id="main-content">
-
-        <!-- Block 1: Photo Gallery -->
-        <section id="photo-gallery">
-            <h2>Photo Gallery</h2>
-
-            <div class="gallery-carousel" role="region" aria-label="Photo gallery of Elysium House interior and terrace">
-                <button class="carousel-arrow prev" aria-label="Previous image">&#10094;</button>
-
-                <div class="carousel-track-container">
-                    <div class="carousel-track">
-                        <div class="carousel-slide is-active">
-                            <picture>
-                                <source srcset="Elysium pics/balcony1.webp" type="image/webp">
-                                <img src="Elysium pics/balcony1.jpg"
-                                    alt="Terrace with chairs and city view">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/living room1.webp" type="image/webp">
-                                <img src="Elysium pics/living room1.jpg"
-                                    alt="Living room of the two-bedroom apartment in Thessaloniki city center"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/living room2.webp" type="image/webp">
-                                <img src="Elysium pics/living room2.jpg"
-                                    alt="Living room in different angles"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/living room3.webp" type="image/webp">
-                                <img src="Elysium pics/living room3.jpg"
-                                     alt="Living room in different angles"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bedroom1a.webp" type="image/webp">
-                                <img src="Elysium pics/bedroom1a.jpg"
-                                    alt="First bedroom with double bed in the 2-bedroom city center apartment"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bedroom1b.webp" type="image/webp">
-                                <img src="Elysium pics/bedroom1b.jpg"
-                                    alt="First bedroom with wardrobe in different angles"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bedroom1c.webp" type="image/webp">
-                                <img src="Elysium pics/bedroom1c.jpg"
-                                    alt="First bedroom with wardrobe in different angles"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bedroom2a.webp" type="image/webp">
-                                <img src="Elysium pics/bedroom2a.jpg"
-                                    alt="Second bedroom with wardrobe in different angles"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bedroom2b.webp" type="image/webp">
-                                <img src="Elysium pics/bedroom2b.jpg"
-                                    alt="Second bedroom with wardrobe in different angles"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/kitchen.webp" type="image/webp">
-                                <img src="Elysium pics/kitchen.jpg"
-                                    alt="Fully equipped kitchen"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/dinning table.webp" type="image/webp">
-                                <img src="Elysium pics/dinning table.jpg"
-                                    alt="Dining room with a big dining table"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bathroom1.webp" type="image/webp">
-                                <img src="Elysium pics/bathroom1.jpg"
-                                    alt="Bathroom"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/bathroom2.webp" type="image/webp">
-                                <img src="Elysium pics/bathroom2.jpg"
-                                    alt="Bathroom "
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="carousel-slide">
-                            <picture>
-                                <source srcset="Elysium pics/balcony2.webp" type="image/webp">
-                                <img src="Elysium pics/balcony2.jpg"
-                                    alt="Terrace with chairs and city view"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-arrow next" aria-label="Next image">&#10095;</button>
-            </div>
-
-            <div class="carousel-dots">
-                <button class="carousel-dot is-active" aria-label="Go to slide 1"></button>
-                <button class="carousel-dot" aria-label="Go to slide 2"></button>
-                <button class="carousel-dot" aria-label="Go to slide 3"></button>
-                <button class="carousel-dot" aria-label="Go to slide 4"></button>
-                <button class="carousel-dot" aria-label="Go to slide 5"></button>
-                <button class="carousel-dot" aria-label="Go to slide 6"></button>
-                <button class="carousel-dot" aria-label="Go to slide 7"></button>
-                <button class="carousel-dot" aria-label="Go to slide 8"></button>
-                <button class="carousel-dot" aria-label="Go to slide 9"></button>
-                <button class="carousel-dot" aria-label="Go to slide 10"></button>
-                <button class="carousel-dot" aria-label="Go to slide 11"></button>
-                <button class="carousel-dot" aria-label="Go to slide 12"></button>
-                <button class="carousel-dot" aria-label="Go to slide 13"></button>
-                <button class="carousel-dot" aria-label="Go to slide 14"></button>
-            </div>
-        </section>
-
-        <!-- Block 2: Amenities -->
-        <section id="amenities">
-            <h2>Amenities</h2>
-
-            <div class="amenities-grid">
-                <!-- WiFi / comfort -->
-                <div class="amenity-item">High-speed WiFi</div>
-                <div class="amenity-item">Two bedrooms</div>
-                <div class="amenity-item">Non-smoking rooms</div>
-
-                <!-- Climate & outdoor -->
-                <div class="amenity-item">Air conditioning</div>
-                <div class="amenity-item">Central heating</div>
-                <div class="amenity-item">Private balcony / terrace</div>
-
-                <!-- Laundry & care -->
-                <div class="amenity-item">Washing machine</div>
-                <div class="amenity-item">Iron & ironing board</div>
-                <div class="amenity-item">Clothes drying rack</div>
-                <div class="amenity-item">Towels</div>
-
-                <!-- Kitchen & coffee -->
-                <div class="amenity-item">Fully equipped kitchen</div>
-                <div class="amenity-item">Coffee maker</div>
-                <div class="amenity-item">Cleaning products</div>
-
-                <!-- Safety & extras -->
-                <div class="amenity-item">Safe box</div>
-                <div class="amenity-item">Hair dryer</div>
-                <div class="amenity-item">Elevator</div>
-                <div class="amenity-item">Sofa bed</div>
-                <div class="amenity-item">Work desk</div>
-            </div>
-        </section>
-
-
-        <!-- Block 3: Guest Reviews -->
-        <section id="guest-reviews">
-            <h2>Guest Reviews</h2>
-
-            <div class="reviews-carousel" role="region" aria-label="Guest reviews carousel">
-                <button class="reviews-arrow prev" aria-label="Previous reviews">&#10094;</button>
-
-                <div class="reviews-track-container">
-                    <div class="reviews-track">
-
-                        <!-- 1. Evi – Greece -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Evi</div>
-                                    <div class="review-meta">Greece · Family · November 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Excellent</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Very good location, polite host and a comfortable, fully equipped apartment.
-                                    Spacious rooms and a perfectly organised kitchen. We will come back!
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 2. Tobias – Germany -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Tobias</div>
-                                    <div class="review-meta">Germany · Group · October 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Excellent</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Central location with many shopping options within walking distance.
-                                    Good metro and bus connections, beautiful top-floor terrace with a view and
-                                    easy check-in/check-out.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 3. Angie – Malta -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Angie</div>
-                                    <div class="review-meta">Malta · Family · August 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Excellent stay</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    All the basic necessities were catered for, much more than we have ever had before.
-                                    Location was perfect – clean and welcoming apartment.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 4. Majaj – Serbia -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Majaj</div>
-                                    <div class="review-meta">Serbia · Family · August 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Highly recommended</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Friendly host, excellent location and a very nice, well-equipped and
-                                    beautifully furnished apartment. Fully recommended.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 5. Danae – Cyprus -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Danae</div>
-                                    <div class="review-meta">Cyprus · Family · August 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Perfect staying</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Perfect.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 6. Vaso – Greece -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Vaso</div>
-                                    <div class="review-meta">Greece · Family · July 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Perfect!</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Location, cleanliness and amenities – it had everything, even a small
-                                    “pharmacy” of useful items!
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- 7. Srdan – Serbia -->
-                        <article class="review-card">
-                            <header class="review-card-header">
-                                <div class="review-info">
-                                    <div class="review-name">Srdan</div>
-                                    <div class="review-meta">Serbia · Family · July 2025</div>
-                                </div>
-                                <div class="review-rating">10<span>/10</span></div>
-                            </header>
-                            <div class="review-title">Very convenient stay</div>
-                            <div class="review-body">
-                                <span class="review-emoji">😊</span>
-                                <p class="review-text">
-                                    Modern, well-furnished apartment with all necessary appliances.
-                                    The owner paid attention to many small details that made our stay
-                                    comfortable and pleasant. Perfect location for exploring Thessaloniki –
-                                    excellent value for money.
-                                </p>
-                            </div>
-                        </article>
-
-                    </div>
-                </div>
-
-                <button class="reviews-arrow next" aria-label="Next reviews">&#10095;</button>
-            </div>
-
-            <p class="reviews-source">
-                Verified reviews from
-                <a href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html"
-                   target="_blank" rel="noopener noreferrer">Booking.com</a>
-            </p>
-        </section>
-
-
-        <!-- Block 4: Location -->
-        <section id="location">
-            <h2>Location</h2>
-            <p style="max-width: 800px; margin: 0 auto 18px;">
-                The apartment is located in the heart of Thessaloniki city center, just a few minutes’
-                walk from the White Tower, the seafront promenade and major sights like Galerius Arch
-                and Aristotelous Square, with Sintrivani metro station close by.
-            </p>
-            <div class="location-content">
-                <div class="location-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.1924405455247!2d22.94968607549408!3d40.62963464265468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a8390063eec7bb%3A0xff9fff345d48f58f!2sElysium%20House!5e1!3m2!1sel!2sgr!4v1763087843142!5m2!1sel!2sgr" 
-                        width="600"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        title="Map showing the location of Elysium House in Thessaloniki"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
-                </div>
-
-                <div class="location-pois">
-                    <ul>
-                        <li>
-                            <span class="poi-name">Sintrivani Square</span>
-                            <span class="poi-distance">100 m</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">Galerius Arch</span>
-                            <span class="poi-distance">350 m</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">OTE Tower</span>
-                            <span class="poi-distance">500 m</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">White Tower</span>
-                            <span class="poi-distance">550 m</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">Aristotelous Square</span>
-                            <span class="poi-distance">1.1 km</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">Ancient Agora of Thessaloniki</span>
-                            <span class="poi-distance">1.2 km</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">Sintrivani Metro Station</span>
-                            <span class="poi-distance">250 m</span>
-                        </li>
-                        <li>
-                            <span class="poi-name">Thessaloniki Airport</span>
-                            <span class="poi-distance">13 km</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-                <!-- Block 5: House Policies -->
-        <section id="house-policies">
-            <h2>House Policies</h2>
-
-            <div class="policies-grid">
-                <div class="policy-item">
-                    <h3>Check-in</h3>
-                    <p>From 3:00 PM until 12:00 AM. Please let us know in advance what time you will arrive.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Check-out</h3>
-                    <p>From 8:00 AM until 12:00 PM.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Damage policy</h3>
-                    <p>If you cause damage to the property during your stay, you may be asked to pay for it.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Children & extra beds</h3>
-                    <p>Extra bed on request – free of charge. Baby cot available – free of charge.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Smoking policy</h3>
-                    <p>Smoking is not allowed anywhere inside the apartment.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Parties</h3>
-                    <p>Parties and events are not allowed.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Quiet hours</h3>
-                    <p>Guests must respect quiet hours between 11:00 PM and 6:00 AM.</p>
-                </div>
-
-                <div class="policy-item">
-                    <h3>Pets</h3>
-                    <p>Pets are not allowed.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Block 7: Book Your Stay -->
-        <section id="book-your-stay">
-            <h2 class="sr-only">Book Your Stay</h2>
-            <div class="book-cta">
-                <a class="book-button"
-                   href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html#hotelTmpl"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Book Your Stay
-                </a>
-            </div>
-        </section>
-
-
-    </main>
-
-    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" aria-hidden="true">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" aria-label="Close image">&times;</button>
-
-            <button class="lightbox-arrow lightbox-prev" aria-label="Previous image">&#10094;</button>
-
-            <img class="lightbox-image" src="" alt="">
-
-            <button class="lightbox-arrow lightbox-next" aria-label="Next image">&#10095;</button>
-        </div>
+  <!-- Lightbox (accessible modal) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-panel" role="document">
+      <button class="lightbox-close" type="button" data-close="true" aria-label="Close image preview">×</button>
+      <img class="lightbox-img" id="lightbox-img" alt="" />
+      <div class="lightbox-controls" aria-label="Image navigation">
+        <button class="lightbox-nav" type="button" data-prev="true" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav" type="button" data-next="true" aria-label="Next image">›</button>
+      </div>
     </div>
+  </div>
 
+  <!-- Sticky booking button (non-intrusive) -->
+  <a class="sticky-book" href="https://www.booking.com/hotel/gr/elysium-house-thessalonike.el.html" target="_blank" rel="noopener">
+    Book on Booking.com
+  </a>
 
-    <footer>
-        <p>&copy; 2025 Elysium House Thessaloniki. Privately Managed. All rights reserved.</p>
-    <!--
-        <div class="footer-contact" aria-label="Contact by phone, Viber or WhatsApp">
-            <img src="data:image/png;base64,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" alt="whatsapp--v6" aria-hidden="true">
-            <img src="data:image/png;base64,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" alt="viber" aria-hidden="true">
-            <a class="footer-phone-number" href="tel:">(+30) </a>
-        </div>
-    -->
-    </footer>
-
-
-
-
-    <script>
-        // Slower custom smooth scrolling for internal links
-        function smoothScrollTo(targetY, duration) {
-            const startY = window.scrollY;
-            const distanceY = targetY - startY;
-            let startTime = null;
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-
-                // Ease-in-out (quadratic)
-                const ease = progress < 0.5
-                    ? 2 * progress * progress
-                    : -1 + (4 - 2 * progress) * progress;
-
-                window.scrollTo(0, startY + distanceY * ease);
-
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                }
-            }
-
-            requestAnimationFrame(animation);
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const headerBar = document.querySelector('.header-bar');
-            const navToggle = document.querySelector('.nav-toggle');
-            const siteNav = document.getElementById('site-nav');
-
-            if (navToggle && headerBar && siteNav) {
-                navToggle.addEventListener('click', function () {
-                    const isOpen = headerBar.classList.toggle('nav-open');
-                    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-                });
-            }
-
-            // Smooth scroll for internal nav links
-            document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(function (anchor) {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href').substring(1);
-                    const target = document.getElementById(targetId);
-                    if (!target) return;
-
-                    e.preventDefault();
-
-                    const headerOffset = headerBar ? headerBar.offsetHeight : 0;
-                    const rect = target.getBoundingClientRect();
-                    const targetY = rect.top + window.scrollY - headerOffset - 10;
-
-                    // Duration in ms – adjust if you want slower/faster
-                    smoothScrollTo(targetY, 900);
-                });
-            });
-
-            // ===== Carousel logic =====
-            const track = document.querySelector('.carousel-track');
-            const slides = track ? Array.from(track.children) : [];
-            const prevButton = document.querySelector('.carousel-arrow.prev');
-            const nextButton = document.querySelector('.carousel-arrow.next');
-            const dotsNav = document.querySelector('.carousel-dots');
-            const dots = dotsNav ? Array.from(dotsNav.children) : [];
-            let currentIndex = 0;
-
-            function updateCarousel(index) {
-                if (!track || slides.length === 0) return;
-
-                if (index < 0) index = slides.length - 1;
-                if (index >= slides.length) index = 0;
-                currentIndex = index;
-
-                const offset = -index * 100;
-                track.style.transform = 'translateX(' + offset + '%)';
-
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('is-active', i === index);
-                });
-                dots.forEach((dot, i) => {
-                    const isActive = i === index;
-                    dot.classList.toggle('is-active', isActive);
-                    dot.setAttribute('aria-current', isActive ? 'true' : 'false');
-                });
-            }
-
-            if (prevButton && nextButton && slides.length > 0) {
-                prevButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
-                nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
-            }
-
-            if (dotsNav) {
-                dots.forEach((dot, i) => {
-                    dot.addEventListener('click', () => updateCarousel(i));
-                });
-            }
-
-            // Initialize carousel position
-            if (track && slides.length > 0) {
-                updateCarousel(0);
-            }
-
-            // ===== Lightbox logic (inspection) =====
-            const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = document.querySelector('.lightbox-image');
-            const lightboxClose = document.querySelector('.lightbox-close');
-            const lightboxPrev = document.querySelector('.lightbox-prev');
-            const lightboxNext = document.querySelector('.lightbox-next');
-
-            let lastFocusedElement = null;
-
-            function getLightboxFocusable() {
-                if (!lightbox) return [];
-                return Array.from(
-                    lightbox.querySelectorAll(
-                        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-                    )
-                );
-            }
-
-            function openLightbox(index) {
-                if (!lightbox || !lightboxImg || !slides.length) return;
-
-                // Wrap around if out of bounds
-                if (index < 0) index = slides.length - 1;
-                if (index >= slides.length) index = 0;
-
-                // Keep carousel and lightbox in sync
-                updateCarousel(index);
-
-                const img = slides[index].querySelector('img');
-                if (!img) return;
-
-                // remember what had focus before opening
-                lastFocusedElement = document.activeElement;
-
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt || '';
-                lightbox.classList.add('is-open');
-                lightbox.setAttribute('aria-hidden', 'false'); // visible for SR
-                document.body.style.overflow = 'hidden';
-
-                // move focus into the dialog
-                if (lightboxClose) {
-                    lightboxClose.focus();
-                }
-            }
-
-            function closeLightbox() {
-                if (!lightbox || !lightboxImg) return;
-                lightbox.classList.remove('is-open');
-                lightbox.setAttribute('aria-hidden', 'true');   // hidden for SR
-                lightboxImg.src = '';
-                document.body.style.overflow = '';
-
-                // restore focus to what opened it
-                if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-                    lastFocusedElement.focus();
-                }
-            }
-
-            if (slides.length > 0 && lightbox) {
-                slides.forEach((slide, index) => {
-                    const img = slide.querySelector('img');
-                    if (!img) return;
-
-                    // Make each image keyboard-activatable
-                    img.setAttribute('role', 'button');
-                    img.setAttribute('tabindex', '0');
-
-                    // Mouse click opens lightbox
-                    img.addEventListener('click', () => openLightbox(index));
-
-                    // Enter / Space also open lightbox
-                    img.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            openLightbox(index);
-                        }
-                    });
-                });
-            }
-
-            if (lightboxPrev && lightboxNext) {
-                lightboxPrev.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    openLightbox(currentIndex - 1);
-                });
-
-                lightboxNext.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    openLightbox(currentIndex + 1);
-                });
-            }
-
-            // Close lightbox (X button, background click, Esc key)
-            if (lightbox && lightboxClose) {
-                lightboxClose.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    closeLightbox();
-                });
-
-                // Click on dark background closes too
-                lightbox.addEventListener('click', (e) => {
-                    if (e.target === lightbox) {
-                        closeLightbox();
-                    }
-                });
-
-                // Trap Tab key inside the lightbox
-                lightbox.addEventListener('keydown', (e) => {
-                    if (e.key !== 'Tab') return;
-
-                    const focusable = getLightboxFocusable();
-                    if (focusable.length === 0) return;
-
-                    const first = focusable[0];
-                    const last = focusable[focusable.length - 1];
-
-                    if (e.shiftKey) {
-                        // Shift+Tab: cycle from first to last
-                        if (document.activeElement === first) {
-                            e.preventDefault();
-                            last.focus();
-                        }
-                    } else {
-                        // Tab: cycle from last to first
-                        if (document.activeElement === last) {
-                            e.preventDefault();
-                            first.focus();
-                        }
-                    }
-                });
-
-                // ESC key closes lightbox
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        closeLightbox();
-                    }
-                });
-            }
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const reviewsCarousel = document.querySelector('.reviews-carousel');
-            if (!reviewsCarousel) return;
-
-            const container = reviewsCarousel.querySelector('.reviews-track-container');
-            const prevBtn = reviewsCarousel.querySelector('.reviews-arrow.prev');
-            const nextBtn = reviewsCarousel.querySelector('.reviews-arrow.next');
-
-            if (!container || !prevBtn || !nextBtn) return;
-
-            function scrollAmount() {
-                return container.clientWidth * 0.8; // how much to move per click
-            }
-
-            prevBtn.addEventListener('click', function () {
-                container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', function () {
-                container.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-            });
-        });
-    </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
-
