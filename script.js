@@ -42,6 +42,22 @@
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const revealEls = document.querySelectorAll(".reveal");
 
+  // Prevent “blank” moments on refresh/hash jumps: immediately reveal items already in view.
+  const isInView = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.bottom > 0 && r.top < (window.innerHeight || 0);
+  };
+  Array.from(revealEls).forEach((el) => {
+    if (isInView(el)) el.classList.add("is-visible");
+  });
+
+  /* Staggered delays (smooth, luxurious pacing) */
+  revealEls.forEach((el, i) => {
+    // cap delay so long pages don’t create huge waits
+    const d = Math.min(i * 70, 420);
+    el.style.setProperty("--d", `${d}ms`);
+  });
+
   if (!prefersReduced && "IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
@@ -50,7 +66,7 @@
           obs.unobserve(entry.target);
         }
       });
-    }, { root: null, threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+    }, { root: null, threshold: 0.12, rootMargin: "0px 0px -12% 0px" });
 
     revealEls.forEach((el) => io.observe(el));
   } else {
