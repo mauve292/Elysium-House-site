@@ -19,5 +19,9 @@
   "nearby": "Nearby",
   "emergencies": "Emergencies",
   "wifi_copied": "Wi-Fi details copied.",
-  "wifi_copy_failed": "Unable to copy automatically."
+  "wifi_copy_failed": "Unable to copy automatically.",
+  "pin_hint": "Please enter your guest PIN to access this private guide.",
+  "pin_error_wrong": "Incorrect PIN. Please try again.",
+  "pin_error_server": "Server error. Please try again.",
+  "loading": "Loading..."
 }

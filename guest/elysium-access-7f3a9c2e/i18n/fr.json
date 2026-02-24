@@ -19,5 +19,9 @@
   "nearby": "A proximite",
   "emergencies": "Urgences",
   "wifi_copied": "Infos Wi-Fi copiees.",
-  "wifi_copy_failed": "Copie automatique impossible."
+  "wifi_copy_failed": "Copie automatique impossible.",
+  "pin_hint": "Veuillez saisir le PIN pour acceder au guide.",
+  "pin_error_wrong": "PIN incorrect. Veuillez reessayer.",
+  "pin_error_server": "Erreur serveur. Veuillez reessayer.",
+  "loading": "Chargement..."
 }

@@ -19,5 +19,9 @@
   "nearby": "In de buurt",
   "emergencies": "Noodnummers",
   "wifi_copied": "Wi-Fi-gegevens gekopieerd.",
-  "wifi_copy_failed": "Automatisch kopieren mislukt."
+  "wifi_copy_failed": "Automatisch kopieren mislukt.",
+  "pin_hint": "Voer uw gast-PIN in om toegang te krijgen.",
+  "pin_error_wrong": "Onjuiste PIN. Probeer opnieuw.",
+  "pin_error_server": "Serverfout. Probeer opnieuw.",
+  "loading": "Laden..."
 }

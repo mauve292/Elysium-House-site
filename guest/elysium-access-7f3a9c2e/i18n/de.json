@@ -19,5 +19,9 @@
   "nearby": "In der Naehe",
   "emergencies": "Notfaelle",
   "wifi_copied": "WLAN-Daten kopiert.",
-  "wifi_copy_failed": "Automatisches Kopieren nicht moeglich."
+  "wifi_copy_failed": "Automatisches Kopieren nicht moeglich.",
+  "pin_hint": "Bitte geben Sie den PIN ein, um den Leitfaden zu oeffnen.",
+  "pin_error_wrong": "Falscher PIN. Bitte erneut versuchen.",
+  "pin_error_server": "Serverfehler. Bitte erneut versuchen.",
+  "loading": "Wird geladen..."
 }

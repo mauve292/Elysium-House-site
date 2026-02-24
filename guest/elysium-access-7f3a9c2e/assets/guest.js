@@ -13,13 +13,24 @@
     "tr",
   ];
   var DEFAULT_LANG = "en";
-  var ACCESS_PIN = "4829";
-  var COOKIE_NAME = "eh_guest";
-  var COOKIE_MAX_AGE = 2592000;
-  var COOKIE_PATH = "/guest/elysium-access-7f3a9c2e";
+  var GUEST_SLUG = "elysium-access-7f3a9c2e";
   var MAP_URL = "https://maps.google.com/?q=Elysium+House";
   var WIFI_SSID = "ELYSIUM_WIFI";
   var WIFI_PASS = "elysium1234";
+  var DEFAULT_DICT = {
+    title: "Elysium House \u2014 Guest Guide",
+    subtitle: "Private page for guests (PIN required).",
+    language_label: "Language",
+    pin_title: "Enter PIN",
+    pin_hint: "Please enter your guest PIN to access this private guide.",
+    pin_placeholder: "Enter 4-digit PIN",
+    pin_submit: "Unlock Guide",
+    pin_error_wrong: "Incorrect PIN. Please try again.",
+    pin_error_server: "Server error. Please try again.",
+    loading: "Loading...",
+    wifi_copied: "Wi-Fi details copied.",
+    wifi_copy_failed: "Unable to copy automatically.",
+  };
 
   function getLangFromPath() {
     var parts = window.location.pathname.split("/").filter(Boolean);
@@ -28,25 +39,6 @@
       return DEFAULT_LANG;
     }
     return lang;
-  }
-
-  function hasGuestCookie() {
-    return document.cookie
-      .split(";")
-      .map(function (item) {
-        return item.trim();
-      })
-      .indexOf(COOKIE_NAME + "=1") !== -1;
-  }
-
-  function setGuestCookie() {
-    document.cookie =
-      COOKIE_NAME +
-      "=1; Max-Age=" +
-      COOKIE_MAX_AGE +
-      "; Path=" +
-      COOKIE_PATH +
-      "; SameSite=Lax";
   }
 
   function setUnlockedState(unlocked) {
@@ -71,8 +63,14 @@
     var textNodes = document.querySelectorAll("[data-i18n]");
     textNodes.forEach(function (node) {
       var key = node.getAttribute("data-i18n");
-      if (dict[key]) {
-        node.textContent = dict[key];
+      var value;
+      if (key === "pin_description" && dict.pin_hint) {
+        value = dict.pin_hint;
+      } else {
+        value = dict[key];
+      }
+      if (value) {
+        node.textContent = value;
       }
     });
 
@@ -127,6 +125,13 @@
     }
   }
 
+  function setPinMessage(message) {
+    var error = document.getElementById("pin-error");
+    if (error) {
+      error.textContent = message || "";
+    }
+  }
+
   function bindActions(dict) {
     var copyBtn = document.getElementById("copy-wifi-btn");
     var mapBtn = document.getElementById("open-map-btn");
@@ -173,23 +178,110 @@
     }
   }
 
+  function getSessionState() {
+    return fetch("/api/guest/session", {
+      method: "GET",
+      credentials: "same-origin",
+      cache: "no-store",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          return { ok: false };
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        return !!(data && data.ok);
+      })
+      .catch(function () {
+        return false;
+      });
+  }
+
+  function refreshSession(dict) {
+    setPinMessage(dict.loading || DEFAULT_DICT.loading);
+    return getSessionState().then(function (isUnlocked) {
+      setPinMessage("");
+      setUnlockedState(isUnlocked);
+      return isUnlocked;
+    });
+  }
+
   function bindPinGate(dict) {
     var form = document.getElementById("pin-form");
     var input = document.getElementById("pin-input");
-    var error = document.getElementById("pin-error");
-    if (!form || !input || !error) {
+    if (!form || !input) {
       return;
     }
 
     form.addEventListener("submit", function (event) {
+      var submitButton = form.querySelector("button[type='submit']");
+      var pinValue = input.value.trim();
       event.preventDefault();
-      if (input.value.trim() === ACCESS_PIN) {
-        setGuestCookie();
-        error.textContent = "";
-        setUnlockedState(true);
-      } else {
-        error.textContent = dict.pin_error || "Incorrect PIN.";
+      if (!pinValue) {
+        setPinMessage(dict.pin_error_wrong || DEFAULT_DICT.pin_error_wrong);
+        return;
       }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+      setPinMessage(dict.loading || DEFAULT_DICT.loading);
+
+      fetch("/api/guest/unlock", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          slug: GUEST_SLUG,
+          pin: pinValue,
+        }),
+      })
+        .then(function (response) {
+          return response
+            .json()
+            .catch(function () {
+              return {};
+            })
+            .then(function (data) {
+              return { response: response, data: data };
+            });
+        })
+        .then(function (result) {
+          if (result.response.ok && result.data && result.data.ok) {
+            return refreshSession(dict).then(function (valid) {
+              if (!valid) {
+                setPinMessage(
+                  dict.pin_error_server || DEFAULT_DICT.pin_error_server
+                );
+              } else {
+                setPinMessage("");
+                input.value = "";
+              }
+            });
+          }
+
+          if (result.response.status === 401 || result.response.status === 400) {
+            setPinMessage(dict.pin_error_wrong || DEFAULT_DICT.pin_error_wrong);
+            return;
+          }
+
+          setPinMessage(dict.pin_error_server || DEFAULT_DICT.pin_error_server);
+        })
+        .catch(function () {
+          setPinMessage(dict.pin_error_server || DEFAULT_DICT.pin_error_server);
+        })
+        .then(function () {
+          if (submitButton) {
+            submitButton.disabled = false;
+          }
+        });
     });
   }
 
@@ -212,7 +304,9 @@
 
     select.addEventListener("change", function (event) {
       var nextLang = event.target.value;
-      localStorage.setItem("eh_guest_lang", nextLang);
+      try {
+        localStorage.setItem("eh_guest_lang", nextLang);
+      } catch (error) {}
       window.location.href = "../" + nextLang + "/";
     });
   }
@@ -229,13 +323,15 @@
   function init() {
     var lang = getLangFromPath();
     bindLanguageSwitcher(lang);
+    setUnlockedState(false);
+    setPinMessage(DEFAULT_DICT.loading);
 
     Promise.all([
       loadJson("../i18n/" + lang + ".json"),
       loadJson("../content/base.en.json"),
     ])
       .then(function (result) {
-        var dict = result[0];
+        var dict = Object.assign({}, DEFAULT_DICT, result[0] || {});
         var content = result[1];
 
         applyI18n(dict);
@@ -246,21 +342,19 @@
         createList("emergency-list", content.emergency_numbers);
         bindActions(dict);
         bindPinGate(dict);
-
-        if (hasGuestCookie()) {
-          setUnlockedState(true);
-        } else {
-          setUnlockedState(false);
-        }
+        return refreshSession(dict);
       })
       .catch(function () {
-        if (hasGuestCookie()) {
-          setUnlockedState(true);
-        } else {
-          setUnlockedState(false);
-        }
+        applyI18n(DEFAULT_DICT);
+        bindActions(DEFAULT_DICT);
+        bindPinGate(DEFAULT_DICT);
+        return refreshSession(DEFAULT_DICT);
       });
   }
 
-  init();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();

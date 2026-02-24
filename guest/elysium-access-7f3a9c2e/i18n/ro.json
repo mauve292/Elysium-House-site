@@ -19,5 +19,9 @@
   "nearby": "In apropiere",
   "emergencies": "Urgente",
   "wifi_copied": "Datele Wi-Fi au fost copiate.",
-  "wifi_copy_failed": "Copierea automata nu a reusit."
+  "wifi_copy_failed": "Copierea automata nu a reusit.",
+  "pin_hint": "Introdu PIN-ul pentru a accesa ghidul.",
+  "pin_error_wrong": "PIN incorect. Incearca din nou.",
+  "pin_error_server": "Eroare de server. Incearca din nou.",
+  "loading": "Se incarca..."
 }

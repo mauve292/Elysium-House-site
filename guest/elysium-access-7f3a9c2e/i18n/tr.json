@@ -19,5 +19,9 @@
   "nearby": "Yakindakiler",
   "emergencies": "Acil Numaralar",
   "wifi_copied": "Wi-Fi bilgileri kopyalandi.",
-  "wifi_copy_failed": "Otomatik kopyalama basarisiz."
+  "wifi_copy_failed": "Otomatik kopyalama basarisiz.",
+  "pin_hint": "Rehbere erismek icin PIN girin.",
+  "pin_error_wrong": "Hatali PIN. Lutfen tekrar deneyin.",
+  "pin_error_server": "Sunucu hatasi. Lutfen tekrar deneyin.",
+  "loading": "Yukleniyor..."
 }
