@@ -1,0 +1,23 @@
+{
+  "title": "Elysium House \u2014 Misafir Rehberi",
+  "subtitle": "Misafirler icin ozel sayfa (PIN gerekli).",
+  "language_label": "Dil",
+  "pin_title": "PIN girin",
+  "pin_description": "Rehbere erismek icin PIN girin.",
+  "pin_label": "PIN",
+  "pin_placeholder": "4 haneli PIN girin",
+  "pin_submit": "Rehberi ac",
+  "pin_error": "Hatali PIN. Lutfen tekrar deneyin.",
+  "quick_actions": "Hizli Islemler",
+  "copy_wifi": "Wi-Fi Kopyala",
+  "open_map": "Haritayi Ac",
+  "call_host": "Ev sahibini ara",
+  "emergency": "Acil Durum",
+  "apartment_info": "Daire Bilgisi / Olanaklar",
+  "house_rules": "Ev Kurallari / Politikalar",
+  "apartment_guide": "Daire Rehberi",
+  "nearby": "Yakindakiler",
+  "emergencies": "Acil Numaralar",
+  "wifi_copied": "Wi-Fi bilgileri kopyalandi.",
+  "wifi_copy_failed": "Otomatik kopyalama basarisiz."
+}

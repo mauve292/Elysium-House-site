@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Elysium House &mdash; Guest Guide</title>
+    <link rel="stylesheet" href="../assets/guest.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero card">
+        <div>
+          <h1 data-i18n="title">Elysium House &mdash; Guest Guide</h1>
+          <p data-i18n="subtitle">Private page for guests (PIN required).</p>
+        </div>
+        <div class="lang-row">
+          <label for="lang-select" data-i18n="language_label">Language</label>
+          <select id="lang-select" aria-label="Language switcher"></select>
+        </div>
+      </header>
+
+      <section id="pin-screen" class="card">
+        <h2 data-i18n="pin_title">Enter PIN</h2>
+        <p data-i18n="pin_description">Please enter your guest PIN to access this private guide.</p>
+        <form id="pin-form" novalidate>
+          <label for="pin-input" data-i18n="pin_label">PIN</label>
+          <input
+            id="pin-input"
+            name="pin"
+            type="password"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            data-i18n-placeholder="pin_placeholder"
+            placeholder="Enter 4-digit PIN"
+            required
+          />
+          <button class="primary" type="submit" data-i18n="pin_submit">Unlock Guide</button>
+          <p id="pin-error" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <div id="guide-content" class="hidden" aria-hidden="true">
+        <section class="card section">
+          <h2 data-i18n="quick_actions">Quick Actions</h2>
+          <div class="actions">
+            <button type="button" id="copy-wifi-btn" data-i18n="copy_wifi">Copy Wi-Fi</button>
+            <button type="button" id="open-map-btn" data-i18n="open_map">Open Map</button>
+            <button type="button" id="call-host-btn" data-i18n="call_host">Call Host</button>
+            <button type="button" id="emergency-btn" data-i18n="emergency">Emergency</button>
+          </div>
+          <p id="action-status" aria-live="polite"></p>
+        </section>
+
+        <section class="card section">
+          <h2 data-i18n="apartment_info">Apartment Info / Amenities</h2>
+          <ul id="amenities-list"></ul>
+        </section>
+
+        <section class="card section">
+          <h2 data-i18n="house_rules">House Rules / Policies</h2>
+          <ul id="rules-list"></ul>
+        </section>
+
+        <section class="card section guide">
+          <h2 data-i18n="apartment_guide">Apartment Guide</h2>
+          <div id="guide-accordion"></div>
+        </section>
+
+        <section class="card section">
+          <h2 data-i18n="nearby">Nearby</h2>
+          <ul id="nearby-list"></ul>
+        </section>
+
+        <section class="card section" id="emergencies">
+          <h2 data-i18n="emergencies">Emergencies</h2>
+          <ul id="emergency-list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="../assets/guest.js" defer></script>
+  </body>
+</html>

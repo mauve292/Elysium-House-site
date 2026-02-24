@@ -1,0 +1,23 @@
+{
+  "title": "Elysium House \u2014 Водич за госте",
+  "subtitle": "Приватна страница за госте (ПИН је обавезан).",
+  "language_label": "Језик",
+  "pin_title": "Унесите ПИН",
+  "pin_description": "Унесите ПИН госта да бисте приступили водичу.",
+  "pin_label": "ПИН",
+  "pin_placeholder": "Унесите ПИН од 4 цифре",
+  "pin_submit": "Откључај водич",
+  "pin_error": "Погрешан ПИН. Покушајте поново.",
+  "quick_actions": "Брзе радње",
+  "copy_wifi": "Копирај Wi-Fi",
+  "open_map": "Отвори мапу",
+  "call_host": "Позови домаћина",
+  "emergency": "Хитно",
+  "apartment_info": "Информације / Садржаји",
+  "house_rules": "Кућни ред / Правила",
+  "apartment_guide": "Водич за апартман",
+  "nearby": "У близини",
+  "emergencies": "Хитни случајеви",
+  "wifi_copied": "Wi-Fi подаци су копирани.",
+  "wifi_copy_failed": "Аутоматско копирање није успело."
+}

@@ -1,0 +1,42 @@
+{
+  "amenities": [
+    "Wi-Fi",
+    "Kitchen",
+    "A/C",
+    "Heating",
+    "Balcony",
+    "Washing Machine",
+    "Iron",
+    "Towels",
+    "Safe",
+    "Hair Dryer"
+  ],
+  "rules": [
+    "Check-in from 15:00",
+    "Check-out by 12:00",
+    "No pets",
+    "No smoking"
+  ],
+  "guide": [
+    "A/C",
+    "Heating",
+    "Oven",
+    "Washing Machine",
+    "Iron",
+    "Towels"
+  ],
+  "nearby": [
+    "Supermarkets",
+    "Pharmacies",
+    "Hospitals",
+    "Bakeries",
+    "Taverns"
+  ],
+  "emergency_numbers": [
+    "112",
+    "166",
+    "100",
+    "199",
+    "108"
+  ]
+}

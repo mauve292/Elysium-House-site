@@ -1,0 +1,23 @@
+{
+  "title": "Elysium House \u2014 Gastleitfaden",
+  "subtitle": "Private Seite fuer Gaeste (PIN erforderlich).",
+  "language_label": "Sprache",
+  "pin_title": "PIN eingeben",
+  "pin_description": "Bitte geben Sie den PIN ein, um den Leitfaden zu oeffnen.",
+  "pin_label": "PIN",
+  "pin_placeholder": "4-stelligen PIN eingeben",
+  "pin_submit": "Leitfaden oeffnen",
+  "pin_error": "Falscher PIN. Bitte erneut versuchen.",
+  "quick_actions": "Schnellaktionen",
+  "copy_wifi": "WLAN kopieren",
+  "open_map": "Karte oeffnen",
+  "call_host": "Gastgeber anrufen",
+  "emergency": "Notfall",
+  "apartment_info": "Wohnungsinfo / Ausstattung",
+  "house_rules": "Hausregeln / Richtlinien",
+  "apartment_guide": "Wohnungsanleitung",
+  "nearby": "In der Naehe",
+  "emergencies": "Notfaelle",
+  "wifi_copied": "WLAN-Daten kopiert.",
+  "wifi_copy_failed": "Automatisches Kopieren nicht moeglich."
+}

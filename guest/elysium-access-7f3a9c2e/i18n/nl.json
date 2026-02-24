@@ -1,0 +1,23 @@
+{
+  "title": "Elysium House \u2014 Gastengids",
+  "subtitle": "Privepagina voor gasten (PIN vereist).",
+  "language_label": "Taal",
+  "pin_title": "Voer PIN in",
+  "pin_description": "Voer uw gast-PIN in om toegang te krijgen.",
+  "pin_label": "PIN",
+  "pin_placeholder": "Voer 4-cijferige PIN in",
+  "pin_submit": "Gids openen",
+  "pin_error": "Onjuiste PIN. Probeer opnieuw.",
+  "quick_actions": "Snelle acties",
+  "copy_wifi": "Kopieer Wi-Fi",
+  "open_map": "Open kaart",
+  "call_host": "Bel host",
+  "emergency": "Nood",
+  "apartment_info": "Appartement info / Voorzieningen",
+  "house_rules": "Huisregels / Beleid",
+  "apartment_guide": "Appartementgids",
+  "nearby": "In de buurt",
+  "emergencies": "Noodnummers",
+  "wifi_copied": "Wi-Fi-gegevens gekopieerd.",
+  "wifi_copy_failed": "Automatisch kopieren mislukt."
+}
